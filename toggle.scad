@@ -1,17 +1,14 @@
 // Global Parameters
 // chrisjrob
 
-// 4mm shock cord large = 9.2/2, small = 4.6/2
-// 4mm shock cord doubled - large = 14/2, small = 7/2
-
 toggle_radius     = 26/2; // Radius of the toggle itself
-large_hole_radius = 14.0/2; // This should be big enough for a knot to fit, approx double small_hole
-small_hole_radius = 7/2; // This should be just big enough for the cord to fit through
-//large_hole_radius = 9.2/2; // This should be big enough for a knot to fit, approx double small_hole
-//small_hole_radius = 4.6/2; // This should be just big enough for the cord to fit through
-bung_height       = toggle_radius * 0.7; // Length of bung
+//large_hole_radius = 14.0/2; // This should be big enough for a knot to fit, approx double small_hole
+//small_hole_radius = 7/2; // This should be just big enough for the cord to fit through
+large_hole_radius = 9.6/2; // This should be big enough for a knot to fit, approx double small_hole
+small_hole_radius = 4.8/2; // This should be just big enough for the cord to fit through
+bung_height       = large_hole_radius * 1.2; // Length of bung
 raft_height       = 0.3;
-precision         = 15; // Set 15 for a standard toggle or 100 for a smooth one
+precision         = 100; // Set 15 for a standard toggle or 100 for a smooth one
 
 module toggle() {
 
