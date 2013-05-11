@@ -11,6 +11,7 @@ small_hole_radius = 7/2; // This should be just big enough for the cord to fit t
 //small_hole_radius = 4.6/2; // This should be just big enough for the cord to fit through
 bung_height       = toggle_radius * 0.7; // Length of bung
 raft_height       = 0.3;
+precision         = 15; // Set 15 for a standard toggle or 100 for a smooth one
 
 module toggle() {
 
@@ -20,7 +21,7 @@ module toggle() {
 		union() {
 			// The toggle
 			translate([0,0,toggle_radius * 0.92])
-				sphere(r=toggle_radius, $fn = 15);
+				sphere(r=toggle_radius, $fn = precision);
                         if ( raft_height > 0 ) {
                             cylinder(r = toggle_radius, h = raft_height);
                         }
@@ -55,7 +56,7 @@ module bung() {
 			// The bung
 			intersection() {
 				translate([toggle_radius*2,0,(bung_height - toggle_radius)])
-					sphere(r=toggle_radius, $fn = 15);
+					sphere(r=toggle_radius, $fn = precision);
 				translate([toggle_radius*2,0,0])
 					cylinder(h = bung_height, r2 = large_hole_radius, r1 = large_hole_radius * 0.95, $fn = 100);
 			}
