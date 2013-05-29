@@ -1,3 +1,8 @@
+// toggle.scad
+// Toggle for Shock Cord
+// 
+// Copyright 2013 Christopher Roberts
+
 // Global Parameters
 // chrisjrob
 
